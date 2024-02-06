@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function QuestionForm(props) {
+function QuestionForm(props, {setPageAfter}) {
   const [formData, setFormData] = useState({
     prompt: "",
     answer1: "",
@@ -31,6 +31,7 @@ function QuestionForm(props) {
         correctIndex: parseInt(formData.correctIndex),
       })
     })
+    setPageAfter()
   }
 
   return (
